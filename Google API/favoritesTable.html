@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+      <meta charset = "utf-8">
+      <title>HOMEWORK</title>
+      <script type="text/javascript" src="functions.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUrjSYnBil6_74J7U0AeaBQ1cwgKgVtS0&libraries=places&callback=initMap" async defer></script>
+      <!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUrjSYnBil6_74J7U0AeaBQ1cwgKgVtS0&libraries=places"></script-->
+   </head>
+
+   <body>
+      <h1>My Favorite Places</h1>
+      <nav>
+         <form action="favoritesTable.html" method="get"> <button> My Places </button> </form>
+         <form action="validationForm.html" method="get"> <button> Form Input </button> </form>
+      </nav>
+      <aside>
+         <a class="twitter-timeline" data-width="400" data-height="400" href="https://twitter.com/hashtag/UMN" data-widget-id="958862424995704837">Твиты про #UMN</a>
+         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+         </script>    
+      </aside>
+      <br>
+
+      <table>
+         <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Hours of Operations Open/Close</th>
+            <th>Additional Information</th>
+         </tr>
+         <tr>
+            <th id = "11" onclick="changeImage('home.jpg')">Home</th>
+            <th id = "0">615 Washington Ave SE, Minneapolis, MN 55414</th>
+            <th>12:00am 11:59pm</th>
+            <th></th>
+         </tr>
+         <tr>
+            <th id = "12" onclick="changeImage('chipotle.jpg')">Chipotle</th>
+            <th id = "1">800 Washington Ave SE, Minneapolis, MN 55414</th>
+            <th>11:00am 11:00pm</th>
+            <th></th>
+         </tr>
+         <tr>
+            <th id = "13" onclick="changeImage('pizzahut.jpg')">PizzaHut</th>
+            <th id = "2">1402 5th St SE, Minneapolis, MN 55414</th>
+            <th>10:00am 10:00pm</th>
+            <th><a href="https://www.cs.umn.edu/academics/classes">Info</a></th>
+         </tr>
+         <tr>
+            <th id = "14" onclick="changeImage('sushi.jpg')">SushiTenzo</th>
+            <th id = "3">901 SE Washington Ave, Minneapolis, MN 55414</th>
+            <th>8:00am 10:00pm</th>
+            <th></th>
+         </tr>
+      </table>
+      <br>
+
+
+      <!--img id="myImage" src="gophers-mascot.png" alt="Picture of my favourite place"-->
+      <div id="floating-panel"> </div>
+      <div class="searchInput">
+      <h4>
+         Radius:  <input type="text" id="radius"> &nbsp;
+         Nearby: 
+         <select id="nearby">
+            <option value="restaurant">Restaurant</option>
+            <option value="hospital">Hospital</option>
+            <option value="museum">Museum</option>
+            <option value="supermarket">Supermarket</option>
+         </select> &nbsp;        
+         <input id="searchNear" type="button" value="Search Near Me" onclick="searchNear();"/>
+      </h4>
+      <h4>
+      	 Destination:  <input type="text" id="dest"> &nbsp; 
+         Mode of Travel: 
+         <select id="travelmode">
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Bicycling</option>
+            <option value="TRANSIT">Transit</option>
+         </select> &nbsp;
+         <input id="getDir" type="button" value="Get Directions" onclick="getDest();"/>
+      </h4> 
+      </div>
+
+
+      <br>
+      <div id="right-panel"></div>
+      <div id="map"></div>
+      <p>The webpage was successfully represented with Google Chrome</p>
+
+    </body>
+
+
+</html>

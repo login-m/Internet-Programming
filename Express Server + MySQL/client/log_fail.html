@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Log in</title>
+  </head>
+
+  <body>
+  
+  <div class="container">
+    <div class="row">
+      <p></p>
+      <p></p>
+    </div>
+    
+    <div class="row">
+      <h1 style="color:black; text-align: center">Login Page</h1>
+      <h4 style="color:black; text-align: center">Please enter your user name and password. Both are case sensitive.</h4>
+      <h4 style="color:red; text-align: center">Wrong password. Try again.</h4>
+    </div>
+
+
+    <div class="row">
+      <p></p>
+      <p></p>
+      <form action="http://localhost:9007/validateLoginDetails" method="POST">
+      User: <br> <input type="text" name="acc_login" required> <br>
+      Password: <br> <input type="password" name="acc_pass" required> <br>
+      <input type="submit" value="Log in">
+    </div>
+  </div>
+
+  </body>
+</html>

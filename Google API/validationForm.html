@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+    <title>Places Form</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+	function ValidateInput(){
+		var name = document.ValidationForm.placename.value;
+		var address1 = document.ValidationForm.addressline1.value;
+		var address2 = document.ValidationForm.addressline2.value;
+		var regex = /^[0-9a-zA-Z]+$/;
+		if (name.match(regex) && address1.match(regex) && address2.match(regex))
+			return true;
+		alert("Place Name and address must be alphanumeric")
+		return false;
+	}
+	</script>
+</head>
+
+
+<header>
+    <h1>My Favorite Places</h1>
+    <nav>
+        <form action="favoritesTable.html" method="get"> <button> My Places </button> </form>
+        <form action="validationForm.html" method="get"> <button> Form Input </button> </form>
+    </nav>
+</header>
+
+<article>
+	<br>
+	<div class="Valid">
+	<form action="http://www-users.cselabs.umn.edu/~tulaj001/form_handler.php" method="get" name="ValidationForm" onsubmit="return ValidateInput();">
+
+	<h4>Place Name <input type="text" name="placename" required ></h4> 
+	<h4>Address Line1 <input type="text" name="addressline1" required ></h4>
+	<h4>Address Line2 <input type="text" name="addressline2" required></h4>
+	<h4>Opening Time <input type="time" name="opentime" required></h4>		
+	<h4>Closing Time <input type="time" name="closetime" required></h4>
+	<h4>Additional Info <input type="text" name="additionalinfo"></h4>
+	<h4>Additional URL Info <input type="url" name="additionalurlinfo"></h4>
+	<button type="submit"> Submit </button>
+
+	</form>
+	</div>
+</article>
+</html>

@@ -1,0 +1,17 @@
+h1, p, ul {
+    text-align: center !important;
+}
+
+#myFavTable.thead {
+	text-align: center;
+}
+
+#error {
+	text-align: center !important;
+	color: red; 
+}
+
+#loguser {
+	float: right !important;
+	margin-top: 1.5%;
+}
